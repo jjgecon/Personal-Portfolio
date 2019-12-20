@@ -1,4 +1,4 @@
-#Code by Javier Gonzalez on Dicember 2019
+#Code by Javier Gonzalez on December 2019
 #For any questions please contact javierj.g18@gmail.com
 #This code will estimate a vector of betas from linear regresion by MCO
 
