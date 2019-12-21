@@ -1,7 +1,7 @@
 %Code by Javier Gonzalez on October 2019
 %For any questions please contact javierj.g18@gmail.com
-%This code will calculate the Nash Equilibrium in a normal game 2x2 with
-%only one equilibrium.
+% Code intended to teach graphing tools, for loops and if statements
+% Some stochastic processes
 
 clear all
 %Setiamos la cantidad de periodos a ver
