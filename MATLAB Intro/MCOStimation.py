@@ -4,6 +4,7 @@
 
 import pandas as pd
 import numpy as np
+
 #Reading data, Its different form the other, becuase pandas assigns the 1st row a varaible names
 df = pd.read_excel(r'D:\OneDrive\Programming\Personal-Portfolio\MATLAB Intro\datos_tarea1Python.xlsx')
 #Getting size of data
