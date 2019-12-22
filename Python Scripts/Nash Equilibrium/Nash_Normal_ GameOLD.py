@@ -87,7 +87,7 @@ class PureNash:
             list_nash.append(f"No pure nash equilibrium was found")
         return list_nash
 
-game1 = np.matrix([[1,1,1,1],[1,1,1,1]])
+game1 = np.matrix([[1,1,0,0],[0,0,2,2]])
 a = PureNash(game1)
 
 for b in a.comparepairs():
