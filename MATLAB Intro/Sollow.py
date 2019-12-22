@@ -1,4 +1,4 @@
-# Code by Javier Gonzalez on October 2019
+# Code by Javier Gonzalez on December 2019
 # For any questions please contact javierj.g18@gmail.com
 # Simple Sollow Model with graphs
 
