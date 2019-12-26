@@ -78,7 +78,7 @@ ax.plot(q,p_o_w,'-r', label = 'Supply With Taxes',zorder=-1)
 ax.plot(q,p_d, label = 'Demand',zorder=-1)
 ax.scatter(q_eq_wo,p_eq_wo,40,'black',zorder=1)
 ax.annotate('Equilibrium Without Taxes',xy=(q_eq_wo,p_eq_wo),
-            xytext=(q_eq_wo+0.4, p_eq_wo-0.2),fontsize=10,
+            xytext=(q_eq_wo+0.8, p_eq_wo-0.2),fontsize=10,
             arrowprops={'arrowstyle': '<|-'})
 ax.scatter(q_eq_w,p_eq_w,40,'black',zorder=1)
 ax.annotate('Equilibrium With Taxes',xy=(q_eq_w,p_eq_w),
