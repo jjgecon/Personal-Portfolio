@@ -81,7 +81,7 @@ if a == 0
     disp(z)
 end
 
-% Chequiaemos cuantos estados estacionarios hay
+% Chequiaemos cuantos estados estacionarios hay graficamente
 figure
 plot(k,f_k,'--k')
 hold on

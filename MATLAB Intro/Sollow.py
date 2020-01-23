@@ -62,6 +62,7 @@ if a2 == 0:
     print('No Steady State for A = 1.5')
 
 # Graph
+colors = ['g','y']
 fig, ax = plt.subplots(figsize=(10, 6))
 zoom = 1 #0.5 for a better zoom
 plt.axis([0, zoom, 0, zoom]) #Change this for a better zoom on the SS
@@ -70,12 +71,13 @@ ax.plot(k,product_savings,'k',label='Savings with A = 1')
 ax.plot(k,product_prime,'--b')
 ax.plot(k,product_savings_prime,'b',label='Savings with A = 1.5')
 ax.plot(k,depreciationlist,'r',label='Depreciation')
-for i in kss:
+for i,color in zip(kss,colors):
     line = []
     b = np.linspace(0,8,n)
     for e in k:
         line.append(i)
-    ax.plot(line,b,'--g', alpha=0.2)
+    ax.plot(line,b,color, alpha=0.2)
 
 plt.legend()
 plt.show()
+print(k)
