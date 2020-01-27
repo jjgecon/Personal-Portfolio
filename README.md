@@ -13,8 +13,9 @@ Exercices for Intro to coding:
 
 ## Webscraping and Text Analysis Project:
 
-* Python Web Scraping.
-* R Text Analysis.
+### Does Gamer Slang Appeal to Gamers? A YouTube Title Analysis.
+
+Please refer [here](https://github.com/jjgecon/Does-Gamer-Slang-Appeal-to-Gamers) for the codes and report.
 
 ## Python Scripts:
 
