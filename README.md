@@ -4,11 +4,11 @@
 
 Exercices for Intro to coding:
 
-* OLS Coeficient Estimation (Class 1).
-* Stochastic Process Examples (Class 2).
-* Simple 2x2 Nash Equilibrium (Class 3).
-* Simple Solow Model (Class 4).
-* Demand and Supply with Tax (Class 4).
+* OLS Coeficient Estimation.
+* Stochastic Process Examples.
+* Simple 2x2 Nash Equilibrium.
+* Simple Solow Model.
+* Demand and Supply with Tax.
 
 
 ## Does Gamer Slang Appeal to Gamers? A YouTube Title Analysis.
