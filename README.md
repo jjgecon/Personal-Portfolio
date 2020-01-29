@@ -9,13 +9,11 @@ Exercices for Intro to coding:
 * Simple 2x2 Nash Equilibrium (Class 3).
 * Simple Solow Model (Class 4).
 * Demand and Supply with Tax (Class 4).
-* OLS Estimation with Inference and missing values (Class 4).
 
-## Webscraping and Text Analysis Project:
 
-### Does Gamer Slang Appeal to Gamers? A YouTube Title Analysis.
+## Does Gamer Slang Appeal to Gamers? A YouTube Title Analysis.
 
-Please refer [here](https://github.com/jjgecon/Does-Gamer-Slang-Appeal-to-Gamers) for the codes and report.
+A web-scrapping and text analysis project with python and R. Please refer [here](https://github.com/jjgecon/Does-Gamer-Slang-Appeal-to-Gamers) for the report and codes.
 
 ## Python Scripts:
 
