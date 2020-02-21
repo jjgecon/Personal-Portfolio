@@ -80,4 +80,3 @@ for i,color in zip(kss,colors):
 
 plt.legend()
 plt.show()
-print(k)
