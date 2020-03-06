@@ -11,7 +11,7 @@ Exercices for Intro to coding:
 * Demand and Supply with Tax.
 
 
-## Does Gamer Slang Appeal to Gamers? A YouTube Title Analysis.
+## Does Gamer Slang Appeal to Gamers? A YouTube Title Analysis. (Work in progress)
 
 A web-scrapping and text analysis project with python and R. Please refer [here](https://github.com/jjgecon/Does-Gamer-Slang-Appeal-to-Gamers) for the report and codes.
 
