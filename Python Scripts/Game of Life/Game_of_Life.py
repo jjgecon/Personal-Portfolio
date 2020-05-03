@@ -141,8 +141,6 @@ while run and sum(alive_list) > 0:
 
     alive_list_aux = alive_list.copy()
 
-    # WHEN IT ENTERS THE LOOP SOMEHOW BOTH ALIVE_LIST AND ALIVE_LIST_AUX UPTADE AT THE SAME TIME!!!!!
-    
     for point,i in zip(grid_list,range(len(alive_list))):
         # Case 1.1
         if i == 0:
