@@ -119,9 +119,7 @@ for index in starting:
     grid_list[index].on()
     alive_list[index] = True
 
-print(sum(alive_list))
-
-# Main Loop
+# Window Loop
 run = True
 while run and sum(alive_list) > 0:
     pygame.time.delay(90)
