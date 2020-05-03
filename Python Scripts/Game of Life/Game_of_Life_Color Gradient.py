@@ -68,15 +68,19 @@ class gridentity:
             self.b -= v 
 
     def revive(self):
-        self.r,self.g,self.b = 0,random.randint(180,230),0
+        self.r,self.g,self.b = 230,230,230
 
     def on(self):
         self.revive()
         pygame.draw.rect(win,(self.r,self.g,self.b),(self.x,self.y,self.w,self.h))
         self.alive = True
+        self.color_degrade()
+        if self.r == 0 and self.g == 0 and self.b == 0:
+            self.off()
 
     def off(self):
-        pygame.draw.rect(win,(0,0,0),(self.x,self.y,self.w,self.h))
+        self.color_degrade()
+        pygame.draw.rect(win,(self.r,self.g,self.b),(self.x,self.y,self.w,self.h))
         self.alive = False
 
     def isalive(self):
