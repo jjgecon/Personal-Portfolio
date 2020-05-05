@@ -88,6 +88,7 @@ class gridentity:
 
 # MAIN
 pygame.init()
+clock = pygame.time.Clock()
 
 winwidth, winhieght = 900,900
 win = pygame.display.set_mode((winwidth,winhieght))
@@ -123,7 +124,7 @@ for index in starting:
 # Window Loop
 run = True
 while run and sum(alive_list) > 0:
-    pygame.time.delay(90)
+    clock.tick(10)
 
     for point,a in zip(grid_list,alive_list):
         if a == True:
@@ -199,3 +200,4 @@ while run and sum(alive_list) > 0:
     
     alive_list = alive_list_aux
     pygame.display.update()
+pygame.quit()
