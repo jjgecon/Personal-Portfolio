@@ -1,3 +1,5 @@
+# By Javier Gonzalez 4/29/2020 javierj.g18@gmail.com
+
 import pygame
 import random
 

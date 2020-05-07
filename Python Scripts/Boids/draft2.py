@@ -1,7 +1,3 @@
-# By Javier Gonzalez 5/7/2020
-# CLosely following the physics and vector explanations of The Coding Train YouTube Challenge
-# https://www.youtube.com/watch?v=mhjuuHl6qHM&list=WL&index=6
-
 import pygame
 import random
 

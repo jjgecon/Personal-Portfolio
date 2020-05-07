@@ -1,3 +1,8 @@
+# By Javier Gonzalez 5/7/2020 javierj.g18@gmail.com
+# CLosely following the physics and vector explanations of The Coding Train YouTube Challenge
+# https://www.youtube.com/watch?v=mhjuuHl6qHM&list=WL&index=6
+# This code uses https://www.red3d.com/cwr/boids/ approach to simluate boid behavior.
+
 import pygame
 import random
 

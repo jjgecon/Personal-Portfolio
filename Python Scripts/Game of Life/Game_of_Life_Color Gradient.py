@@ -1,6 +1,8 @@
+# By Javier Gonzalez 4/29/2020 javierj.g18@gmail.com
+# Code that simulated the Conway's Game of Life using Pygame!
+
 import pygame
 import random
-import time
 
 global alive_list, alive_list_aux
 
@@ -60,15 +62,16 @@ class gridentity:
 
     def color_degrade(self):
         v = 10
-        if self.r > 0:
-            self.r -= v 
-        elif  self.g > 0:
-            self.g -= v 
-        elif self.b > 0:
+        if self.r > 10:
+            self.r -= v
+        elif  self.g > 10:
+            self.g -= v
+        elif self.b > 10:
             self.b -= v 
 
     def revive(self):
-        self.r,self.g,self.b = 230,230,230
+        c = random.randint(230,255)
+        self.r,self.g,self.b = c,c,c
 
     def on(self):
         self.revive()
