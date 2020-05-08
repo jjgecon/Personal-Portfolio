@@ -97,7 +97,7 @@ class Boid():
 
     def visualize(self, chn = True):
         # Draw the local circle
-        pygame.draw.circle(self.win, self.color, (int(self.position.x),int(self.position.y)), int(self.visionRadious),1)
+        pygame.draw.circle(self.win, self.color, (int(self.position.x),int(self.position.y)), self.visionRadious,1)
         
         # Draw mean position
         if not self.visual:
@@ -206,14 +206,6 @@ while run:
     if keys[pygame.K_l]:
         for b in boid_list:
             b.sepForce = .9*b.sepForce
-    
-    # Play with visual radious
-    if keys[pygame.K_u]:
-        for b in boid_list:
-            b.visionRadious = 1.1*b.visionRadious
-    if keys[pygame.K_j]:
-        for b in boid_list:
-            b.visionRadious = .9*b.visionRadious
 
     # Play with Maximum Speed
     if keys[pygame.K_i]:
