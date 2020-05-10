@@ -11,12 +11,13 @@ Exercices for Intro to coding:
 * Demand and Supply with Tax.
 
 
-## Does Gamer Slang Appeal to Gamers? A YouTube Title Analysis. (Work in progress)
+## Does Gamer Slang Appeal to Gamers? A YouTube Title Analysis.
 
-A web-scrapping and text analysis project with python and R. Please refer [here](https://github.com/jjgecon/Does-Gamer-Slang-Appeal-to-Gamers) for the report and codes.
+A project to practice web-scrapping and text analysis project with python and R. Please refer [here](https://github.com/jjgecon/Does-Gamer-Slang-Appeal-to-Gamers) for the report and codes.
 
 ## Python Scripts:
 
+* Boid Behavior Simulation
 * Conway's Game of Life Visualization
 * Nash equilibrium calculation for normal games.
 * Expected Utility Reduction Triangle: the Allais Paradox.
