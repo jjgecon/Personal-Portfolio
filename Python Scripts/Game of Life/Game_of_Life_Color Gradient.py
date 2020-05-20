@@ -95,7 +95,7 @@ clock = pygame.time.Clock()
 
 winwidth, winhieght = 900,900
 win = pygame.display.set_mode((winwidth,winhieght))
-pp = 50
+pp = 60
 alive_list = create_alive_list(pp)
 
 grid_points,gwidht,gheight = create_grid(winwidth, winhieght,pp)

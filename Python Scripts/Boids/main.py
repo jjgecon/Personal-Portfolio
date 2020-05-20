@@ -9,7 +9,7 @@ import random
 pygame.init()
 clock = pygame.time.Clock()
 run = True
-winwidth, winhieght = 900,900
+winwidth, winhieght = 600,600
 
 win = pygame.display.set_mode((winwidth,winhieght))
 
@@ -33,7 +33,7 @@ class Boid():
         self.SEPARATION = False
 
     def draw(self):
-        pygame.draw.line(self.win, self.color,(self.position.xy),(self.position.xy+2.5*self.v.xy),2)
+        pygame.draw.aaline(self.win, self.color,(self.position.xy),(self.position.xy+2.5*self.v.xy),2)
         pygame.draw.circle(self.win, self.color, (int(self.position.x),int(self.position.y)), 10)
         if self.position.x <= 0:
             self.position.x = winwidth
@@ -164,7 +164,7 @@ def re_draw_gw(current, vis = True):
     pygame.display.update()
 
 # Create objects
-n_boids = 80
+n_boids = 50
 boid_list = []
 cc = 0
 vis = False
