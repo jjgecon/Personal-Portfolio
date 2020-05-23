@@ -9,7 +9,7 @@ import random
 pygame.init()
 clock = pygame.time.Clock()
 run = True
-winwidth, winhieght = 600,600
+winwidth, winhieght = 900,900
 
 win = pygame.display.set_mode((winwidth,winhieght))
 

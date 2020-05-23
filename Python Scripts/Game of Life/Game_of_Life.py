@@ -10,8 +10,8 @@ def create_alive_list(pp):
     return alive
 
 def create_grid(winwidth,winhieght,pixels):
-    gwidht = winwidth/pixels
-    gheight = winhieght/pixels
+    gwidht = winwidth//pixels
+    gheight = winhieght//pixels
 
     grid_points = []
 
@@ -85,9 +85,9 @@ class gridentity:
 pygame.init()
 clock = pygame.time.Clock()
 
-winwidth, winhieght = 900,900
+winwidth, winhieght = 700,700
 win = pygame.display.set_mode((winwidth,winhieght))
-pp = 50
+pp = 70
 alive_list = create_alive_list(pp)
 
 grid_points,gwidht,gheight = create_grid(winwidth, winhieght,pp)

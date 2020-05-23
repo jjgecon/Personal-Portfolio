@@ -1,11 +1,12 @@
 # By Javier Gonzalez 5/21/2020 javierj.g18@gmail.com
+# Some clasical utility vectors dfisplayed in matplotlib
 
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.axes3d import Axes3D
 from matplotlib import cm
 import numpy as np
 
-def graphUIC():
+def graphUIC(title, colormap = cm.cool):
     n = 100
     xgrid = np.linspace(1,10,n)
     x1,x2 = np.meshgrid(xgrid[::-1],xgrid)
@@ -13,54 +14,46 @@ def graphUIC():
     fig = plt.figure(figsize=(8, 6))
     ax = fig.add_subplot(111, projection='3d')
 
-    ax.contourf(x1, x2, uu , zdir='z', offset = 1,cmap=cm.cividis, alpha = .3)
+    ax.contour(x1, x2, uu , zdir='z', offset = 1,cmap=colormap)
     a = ax.plot_surface(x1,
                     x2,
                     uu,
                     rstride=7, cstride=7,
-                    alpha = .7,
+                    alpha = .5,
                     linewidth=1,
-                    cmap = cm.cividis)
+                    cmap = colormap)
 
     ax.view_init(elev=25,azim=-130)
     ax.set_xlabel('Good 1')
     ax.set_ylabel('Good 2')
     ax.set_zlabel('Utility Level')
-    ax.set_title('Utility and Indiference Curves with 2 goods')
+    ax.set_title(title)
     fig.colorbar(a, ax=ax, shrink=0.5, aspect=5)
     plt.show()
 
 #Cobb-Douglass constant returns to scale
 def utility(x1,x2,α=.5):
     return (x1**α)*(x2**(1-α))
-def x1_calc(x2,fixedu,α=.5):
-    return (fixedu/(x2**(1-α)))**(1/α)
 
-graphUIC()
+graphUIC('Constant Returns Cobb-Douglass')
 
 #Cobb-Douglass increasing returns to scale
-def utility(x1,x2,α=.5,beta=.8):
+def utility(x1,x2,α=.6,beta=.6):
     return (x1**α)*(x2**beta)
-def x1_calc(x2,fixedu,α=.5,beta=.6):
-    return (fixedu/(x2**beta))**(1/α)
 
-graphUIC()
+graphUIC('Increasing Returns Cobb-Douglass')
 
 #Cobb-Douglass decreasing returns to scale
-def utility(x1,x2,α=.5,beta=.2):
+def utility(x1,x2,α=.4,beta=.4):
     return (x1**α)*(x2**beta)
-def x1_calc(x2,fixedu,α=.5,beta=.2):
-    return (fixedu/(x2**beta))**(1/α)
 
-graphUIC()
+graphUIC('Decreasing Returns Cobb-Douglass')
 
 #Perfect Substitutes
 def utility(x1,x2):
     return x1 + x2
-def x1_calc(x2,fixedu):
-    return fixedu - x2
 
-graphUIC()
+graphUIC('Perfect Substitutes')
 
 def utility(x1,x2):
     out = np.zeros_like(x1)
@@ -74,4 +67,28 @@ def utility(x1,x2):
         out[i] = out_aux
     return out
 
-graphUIC()
+graphUIC('Perfect Complements (Leontief)')
+
+def utility(x1,x2):
+    mu = 0.5
+    sigma = 0.5
+    rho = (sigma-1)/sigma
+    return (mu*(x1**rho) + (1-mu)*(x2**rho))**(1/rho)
+
+graphUIC('CES subtitutes $\sigma = 0.5$')
+
+def utility(x1,x2):
+    mu = 0.5
+    sigma = 3
+    rho = (sigma-1)/sigma
+    return (mu*(x1**rho) + (1-mu)*(x2**rho))**(1/rho)
+
+graphUIC('CES subtitutes $\sigma = 3$')
+
+def utility(x1,x2):
+    mu = 0.5
+    sigma = 9
+    rho = (sigma-1)/sigma
+    return (mu*(x1**rho) + (1-mu)*(x2**rho))**(1/rho)
+
+graphUIC('CES subtitutes $\sigma = 9$')

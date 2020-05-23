@@ -93,9 +93,9 @@ class gridentity:
 pygame.init()
 clock = pygame.time.Clock()
 
-winwidth, winhieght = 900,900
+winwidth, winhieght = 700,700
 win = pygame.display.set_mode((winwidth,winhieght))
-pp = 60
+pp = 70
 alive_list = create_alive_list(pp)
 
 grid_points,gwidht,gheight = create_grid(winwidth, winhieght,pp)
