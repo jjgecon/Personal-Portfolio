@@ -19,8 +19,13 @@ A project to practice web-scrapping and text analysis project with python and R.
 
 * Boid Behavior Simulation
 * Conway's Game of Life Visualization
+
+### Economics Related Scripts
+
 * Nash equilibrium calculation for normal games.
 * Expected Utility Reduction Triangle: the Allais Paradox.
+* Utility Indiference Curves Visualization
+* OLS Visualization
 
 ## R Scripts:
 
