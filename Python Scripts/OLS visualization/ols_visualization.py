@@ -31,10 +31,9 @@ class Point():
         pygame.gfxdraw.filled_circle(self.win,int(self.pos.x),int(self.pos.y),r,black)
         
     def text_point(self):
-        font = pygame.font.Font('freesansbold.ttf', 12)
-        text = font.render("("+str(round(self.pos.x))+' , '+str(round(winhieght - self.pos.y))+")", True, black, white) 
-        win.blit(text,(self.pos.x + 10, self.pos.y - 10)) 
-    
+        ptext = "(" + str(round(self.pos.x)) + ' , '+ str(round(winhieght - self.pos.y)) + ")" 
+        display_some_text(ptext,12,self.pos.x + 10, self.pos.y - 10,black,white)
+
 class Fitline():
 
     def __init__(self,slope,intercept,win):
@@ -76,16 +75,10 @@ class Fitline():
         
         se = np.sum(totald**2)
         # Show the Squared Error
-        font = pygame.font.Font('freesansbold.ttf', 20)
-        disp_text = f"Intercept = {winwidth - self.intercept:.1f}"
-        text = font.render(disp_text, True, self.color, white) 
-        win.blit(text,(winwidth*offsetx, winhieght - 60))
-        disp_text = f"Slope value = {self.slope*(-1):.3f}"
-        text = font.render(disp_text, True, self.color, white) 
-        win.blit(text,(winwidth*offsetx, winhieght - 40)) 
-        disp_text = f"SE = {(se/1000):.1f}"
-        text = font.render(disp_text, True, self.color, white) 
-        win.blit(text,(winwidth*offsetx, winhieght - 20)) 
+        ff = 22
+        display_some_text(f"Intercept = {winhieght - self.intercept:.1f}",ff,winwidth*offsetx, winhieght - 65,self.color,white)
+        display_some_text(f"Slope value = {self.slope*(-1):.3f}",ff,winwidth*offsetx, winhieght - 45,self.color,white)
+        display_some_text(f"SE = {(se/1000):.1f}",ff,winwidth*offsetx, winhieght - 25,self.color,white)
 
 class OLS:
 
@@ -139,58 +132,47 @@ class OLS:
         se = np.sum(totald**2)
         # Show the Squared Error
         offsetx = .38
-        font = pygame.font.Font('freesansbold.ttf', 20)
-        disp_text = f"Intercept = {winhieght - self.beta[0]:.1f}"
-        text = font.render(disp_text, True, self.color, white) 
-        win.blit(text,(winwidth*offsetx, winhieght - 60))
-        disp_text = f"Slope value = {self.beta[1]*(-1):.3f}"
-        text = font.render(disp_text, True, self.color, white) 
-        win.blit(text,(winwidth*offsetx, winhieght - 40)) 
-        disp_text = f"SE = {(se/1000):.1f}"
-        text = font.render(disp_text, True, self.color, white) 
-        win.blit(text,(winwidth*offsetx, winhieght - 20)) 
+        ff = 22 
+        display_some_text(f"Intercept = {winhieght - self.beta[0]:.1f}",ff,winwidth*offsetx, winhieght - 65,self.color,white)
+        display_some_text(f"Slope value = {self.beta[1]*(-1):.3f}",ff,winwidth*offsetx, winhieght - 45,self.color,white)
+        display_some_text(f"SE = {(se/1000):.1f}",ff,winwidth*offsetx, winhieght - 25,self.color,white)
 
-pygame.display.set_caption('Text here') 
+# Some functions
+
+def display_some_text(intext,fontsize,x,y,color,bg):
+    font = pygame.font.Font('freesansbold.ttf', fontsize)
+    text = font.render(intext, True, color, bg) 
+    win.blit(text,(x, y))
 
 def draw(points):
     win.fill(white) 
     ff = 15
-    font = pygame.font.Font('freesansbold.ttf', ff)
-    dtext = "Press 'd' to substract points"
-    text = font.render(dtext, True, black, white) 
-    win.blit(text,(20, winhieght-20))
-    dtext = "Press 'a' to add points"
-    text = font.render(dtext, True, black, white) 
-    win.blit(text,(20, winhieght-40))
-    dtext = "Press 'i' to show distantance"
-    text = font.render(dtext, True, black, white) 
-    win.blit(text,(20, winhieght-60))
-    dtext = "Press 'x' to hide point location"
-    text = font.render(dtext, True, black, white) 
-    win.blit(text,(winwidth*(.7), winhieght-20))
-    dtext = "Press 's' to show point location"
-    text = font.render(dtext, True, black, white) 
-    win.blit(text,(winwidth*(.7), winhieght-40))
-    dtext = "Press 'o' to hide distantance"
-    text = font.render(dtext, True, black, white) 
-    win.blit(text,(winwidth*(.7), winhieght-60))
 
     if lines:
         for l in lines:
+            l.show()
             if l.active:
                 l.calculate_distance_p(points,show_d)
-            l.show()
+            
     
     if ols_list:
         ols_list[0].show()
         ols_list[0].calculate_distance_p(show_d)
 
     for d in points:
+        d.show()
         if display_point_t:
             d.text_point()
-        d.show()
         
 
+    pygame.draw.rect(win,white,(0,winhieght-70,winwidth*(.28),winhieght-70))
+    pygame.draw.rect(win,white,(winwidth*(.69),winhieght-70,winwidth*(.3),winhieght-70))
+    display_some_text("Press 'd' to substract points",ff,20, winhieght-20,black,white)
+    display_some_text("Press 'a' to add points",ff,20, winhieght-40,black,white)
+    display_some_text("Press 'i' to show distantance",ff,20, winhieght-60,black,white)
+    display_some_text("Press 'x' to hide point location",ff,winwidth*(.7), winhieght-20,black,white)
+    display_some_text("Press 's' to show point location",ff,winwidth*(.7), winhieght-40,black,white)
+    display_some_text("Press 'o' to hide distantance",ff,winwidth*(.7), winhieght-60,black,white)
 
     pygame.display.update()
 
@@ -212,13 +194,13 @@ if __name__ == "__main__":
         data.append(Point(rx,ry,win))
 
     lines = []
-    n_lines = 10
+    n_lines = 20
 
     ols_list = []
 
     while run:
 
-        clock.tick(12)
+        clock.tick(15)
 
         keys = pygame.key.get_pressed()
         #Out check
@@ -309,9 +291,8 @@ if __name__ == "__main__":
         if intercept:
             ols_list = []
             lines = []
-            n_lines = 10
             for i in range(n_lines):
-                lines.append(Fitline(.5,50*i,win))
+                lines.append(Fitline(.2,30*i,win))
                 lines[i].inactive()
 
             lines[0].activate()
@@ -323,9 +304,9 @@ if __name__ == "__main__":
         if slopes:
             ols_list = []
             lines = []
-            SSlopes =  [.25,.5,.75,1,1.25,1.5,1.75,2]
+            SSlopes =  np.linspace(-.6,.6,n_lines)
             for s,i in zip(SSlopes,range(len(SSlopes))):
-                lines.append(Fitline(s,50,win))
+                lines.append(Fitline(s,winhieght//2,win))
                 lines[i].inactive()
             lines[0].activate()
 
