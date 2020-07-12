@@ -20,9 +20,9 @@ Please refer to the following [repo](https://github.com/jjgecon/Opportunity-Insi
 * Boid Behavior Simulation.
 * Conway's Game of Life Visualization.
 
-## Does Gamer Slang Appeal to Gamers? A YouTube Title Analysis.
+## [Does Gamer Slang Appeal to Gamers? A YouTube Title Analysis](https://github.com/jjgecon/Does-Gamer-Slang-Appeal-to-Gamers).
 
-A project to practice web-scrapping and text analysis project with python and R. Please refer [here](https://github.com/jjgecon/Does-Gamer-Slang-Appeal-to-Gamers) for the report and codes.
+A project to practice web-scrapping and text analysis project with python and R.
 
 ## R Scripts:
 
