@@ -22,7 +22,7 @@ Please refer to the following [repo](https://github.com/jjgecon/Opportunity-Insi
 
 ## [Does Gamer Slang Appeal to Gamers? A YouTube Title Analysis](https://github.com/jjgecon/Does-Gamer-Slang-Appeal-to-Gamers).
 
-A project to practice web-scrapping and text analysis project with python and R.
+A project to practice web-scrapping and text analysis with python and R.
 
 ## R Scripts:
 
