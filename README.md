@@ -1,10 +1,10 @@
 # Welcome to Javier's Programming Portfolio
 
-## [Opportunity Insights Cource Projects](https://opportunityinsights.org/course/)
+## [Opportunity Insights Course Projects](https://opportunityinsights.org/course/)
 
-A set of assigment for the Course of "Using Big Data to Solve Economic and Social Problems". The idea was to learn about development economic and practice quantitative and english communication skills.
+This is a set of assigments for the course of "Using Big Data to Solve Economic and Social Problems". The idea was to learn about development economic and practice quantitative skills and english communication.
 
-Please refer to the following [repo](https://github.com/jjgecon/Opportunity-Insights-Cource-Projects) and browse the reports, Stata and R codes. 
+Please refer to the following [repo](https://github.com/jjgecon/Opportunity-Insights-Cource-Projects) to browse the reports and codes. 
 
 ## Python Scripts:
 
@@ -20,9 +20,9 @@ Please refer to the following [repo](https://github.com/jjgecon/Opportunity-Insi
 * Boid Behavior Simulation.
 * Conway's Game of Life Visualization.
 
-## Does Gamer Slang Appeal to Gamers? A YouTube Title Analysis.
+## [Does Gamer Slang Appeal to Gamers? A YouTube Title Analysis](https://github.com/jjgecon/Does-Gamer-Slang-Appeal-to-Gamers).
 
-A project to practice web-scrapping and text analysis project with python and R. Please refer [here](https://github.com/jjgecon/Does-Gamer-Slang-Appeal-to-Gamers) for the report and codes.
+A project to practice web-scrapping and text analysis project with python and R.
 
 ## R Scripts:
 
