@@ -27,6 +27,7 @@ A project to practice web-scrapping and text analysis project with python and R.
 ## R Scripts:
 
 * OLS regressions for PISA 2015.
+* PDF Processing Pipeline.
 
 ## Introduction to Programming in MATLAB (with Python supplements):
 
