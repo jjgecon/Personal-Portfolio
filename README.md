@@ -1,11 +1,5 @@
 # Welcome to Javier's Programming Portfolio
 
-## [Opportunity Insights Course Projects](https://opportunityinsights.org/course/)
-
-This is a set of assigments for the course of "Using Big Data to Solve Economic and Social Problems". The idea was to learn about development economic and practice quantitative skills and english communication.
-
-Please refer to the following [repo](https://github.com/jjgecon/Opportunity-Insights-Cource-Projects) to browse the reports and codes. 
-
 ## Python Scripts:
 
 ### Economics Related Scripts
